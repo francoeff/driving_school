@@ -58,7 +58,7 @@ const routes = [
       component: lazy( () => import('./views/courses/Courses') )
     },
     {
-      path: 'courses/edit/:idCurso',
+      path: 'courses/edit/:idCourse',
       component: lazy( () => import('./views/courses/CourseEdit') )
     },
     {

@@ -1,11 +1,25 @@
+import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom";
+import { getCourse } from "../../apis/courses";
+import { CourseForm } from "../../components/Courses/CourseForm";
+
 
 const CourseEdit = () => {
-    const parametros = useParams();
+    const { idCourse } = useParams();
+    const [courseData, setCourseData] = useState({});
+    
+    const fetchCourse = async() => {
+        const data = await getCourse( parseInt( atob( idCourse ) ) );
+        setCourseData( data );
+    }
+
+    useEffect(() => {
+      fetchCourse();
+    }, [])    
 
     return (
         <div>
-            <h1>{ parametros.idCurso === 'new' ? 'Nuevo Curso' : 'Editar Curso ' + parametros.idCurso }</h1>
+            <CourseForm courseData={ courseData } titleForm={ idCourse === 'new' ? 'Nuevo Curso' : 'Editar Curso ' + idCourse } />
         </div>
     );
 };

@@ -10,9 +10,9 @@ const CourseItem = ({ title, description, price, imgUri, uri }) => {
         <Card title={ title } >
             <div className="course-item">
                 <div className="course-item__img">
-                    <img src={ imgUri } alt={ `Imagen curso ${ title }` }/>
+                    <img src={ imgUri } alt={ `Imagen ${ title }` }/>
                 </div>
-                <div className="course-item__price">${ price }</div>
+                <div className="course-item__price bg-info text-white text-center">${ price }</div>
                 <div className="course-item__description">
                     <p>{ description }</p>
                 </div>

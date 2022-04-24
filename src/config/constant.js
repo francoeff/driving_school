@@ -1,6 +1,7 @@
 export const BASENAME = '/admin'; // don't add '/' at end off BASENAME
 export const BASE_URL = '/app/dashboard/default';
 export const BASE_TITLE = ' | Driving School';
+export const BASE_IMG = 'assets/images/';
 
 export const CONFIG = {
   layout: 'vertical', // vertical, horizontal
