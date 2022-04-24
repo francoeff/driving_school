@@ -11,7 +11,6 @@ export const useForm = ( init = {} ) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        alert("Hola");
         console.log(valuesForm);
     }
 

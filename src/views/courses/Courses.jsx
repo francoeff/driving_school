@@ -16,7 +16,6 @@ const Courses = () => {
     
     const fetchCourses = async() =>{
         const fetchedCourses = await getCourses();
-        console.log(fetchedCourses);
         const processedCourses = fetchedCourses
             .map( course => ({
                 ...course, 

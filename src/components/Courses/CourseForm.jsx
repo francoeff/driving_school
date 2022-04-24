@@ -7,7 +7,8 @@ import imgNotAvailable from '../../assets/images/image-not-available.jpg';
 
 export const CourseForm = ({ titleForm, courseData }) => {
     const [valuesForm, handleChange, handleSubmit] = useForm( courseData );
-    const [imgCourse, setimgCourse] = useState( imgNotAvailable )
+    const [imgCourse, setimgCourse] = useState( imgNotAvailable );
+    
     return (
         <Row>
             <Col>
