@@ -54,12 +54,20 @@ const routes = [
       component: lazy(() => import('./views/dashboard/DashDefault'))
     },
     {
-      path: 'courses/list',
+      path: '/courses/list',
       component: lazy( () => import('./views/courses/Courses') )
     },
     {
-      path: 'courses/edit/:idCourse',
+      path: '/courses/edit/:idCourse',
       component: lazy( () => import('./views/courses/CourseEdit') )
+    },
+    {
+      path: '/lessons/list',
+      component: lazy( () => import('./views/lessons/Lessons') )
+    },
+    {
+      path: '/lessons/edit/:id',
+      component: lazy( () => import('./views/lessons/LessonEdit') )
     },
     {
       path: '/basic/button',

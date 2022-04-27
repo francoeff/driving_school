@@ -3,7 +3,7 @@ import { ListGroup } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 
 import navigation from '../../../menu-items';
-import { BASE_TITLE, BASENAME } from '../../../config/constant';
+import { BASE_TITLE } from '../../../config/constant';
 
 const Breadcrumb = () => {
   const location = useLocation();
@@ -25,7 +25,7 @@ const Breadcrumb = () => {
         if (collapse.type && collapse.type === 'collapse') {
           getCollapse(collapse, index);
         } else if (collapse.type && collapse.type === 'item') {
-          if (document.location.pathname === BASENAME + collapse.url) {
+          if (location.pathname === collapse.url) {
             setMain(item);
             setItem(collapse);
           }

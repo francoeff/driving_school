@@ -22,13 +22,13 @@ const menuItems = {
       icon: 'icon-ui',
       children: [
         {
-          id: 'cursos',
+          id: 'courses',
           title: 'Cursos',
           type: 'collapse',
           icon: 'feather icon-box',
           children: [
             {
-              id: 'list-course',
+              id: 'list-courses',
               title: 'Listado',
               type: 'item',
               url: '/courses/list'
@@ -39,6 +39,20 @@ const menuItems = {
               type: 'item',
               url: '/courses/edit/new'
             },
+          ]
+        },
+        {
+          id: 'lessons',
+          title: 'Clases',
+          type: 'collapse',
+          icon: 'feather icon-file-text',
+          children: [
+            {
+              id: 'list-lessons',
+              title: 'Listado',
+              type: 'item',
+              url: '/lessons/list'
+            }
           ]
         }
       ]

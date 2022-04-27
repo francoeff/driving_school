@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col, Breadcrumb, Pagination } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import ModuleNotification from '../../../components/Widgets/Statistic/Notification';
-
+ 
 import Card from '../../../components/Card/MainCard';
 
 const BasicBreadcrumbPagination = () => {

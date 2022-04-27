@@ -9,16 +9,15 @@ const toChileanPeso = mount => new Intl.NumberFormat('es-CL').format( mount );
 const generateUriCourse = id => `/courses/edit/${btoa(id)}`;
 
 
-const Courses = () => {
-
+const Lessons = () => {
     const [courses, setCourses] = useState([]);
     const [fetching, setFetching] = useState(true);
-    
+
     const fetchCourses = async() =>{
         const fetchedCourses = await getCourses();
         const processedCourses = fetchedCourses
             .map( course => ({
-                ...course, 
+                ...course,
                 price : toChileanPeso( course.price ),
                 uri : generateUriCourse( course.id ),
             }) );
@@ -34,9 +33,9 @@ const Courses = () => {
     return (
         <Row>
             {
-                fetching 
-                
-                ?
+                fetching
+
+                    ?
                     (
                         <Col>
                             <Card>
@@ -46,8 +45,8 @@ const Courses = () => {
                             </Card>
                         </Col>
                     )
-                :
-                
+                    :
+
                     courses.map( course => (
                         <Col lg={4} md={6} key={course.id} >
                             <CourseItem
@@ -55,10 +54,10 @@ const Courses = () => {
                             />
                         </Col>
                     ))
-                
+
             }
         </Row>
     );
 };
 
-export default Courses;
+export default Lessons;

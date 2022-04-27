@@ -11,6 +11,7 @@
     "bootstrap": "^4.6.0",
     "firebase": "^8.3.0",
     "formik": "^2.2.9",
+    "jsonwebtoken": "^8.5.1",
     "namor": "^2.0.3",
     "node-sass": "^7.0.1",
     "rc-tooltip": "^5.1.1",
@@ -46,7 +47,7 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest" 
+      "react-app/jest"
     ]
   },
   "browserslist": {

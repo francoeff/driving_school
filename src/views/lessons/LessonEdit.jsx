@@ -5,7 +5,7 @@ import { Row, Col, Button } from 'react-bootstrap'
 import LessonsCourse from '../../components/Courses/LessonsCourse'
 
 
-const CourseEdit = () => {
+const LessonEdit = () => {
   const idCourse = parseInt(atob( useParams().idCourse ) ) || null;
 
   return (
@@ -38,4 +38,4 @@ const CourseEdit = () => {
     );
 };
 
-export default CourseEdit;
+export default LessonEdit;
